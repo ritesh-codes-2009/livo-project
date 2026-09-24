@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>LIVO - Business Registration</title>
+
+    <!-- Shared LIVO CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="javascript.js"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+    <header class="livo-navbar">
+      <a href="index.html" class="livo-logo">
+        <span class="logo-l">L</span><span class="logo-i">I</span
+        ><span class="logo-v">V</span><span class="logo-o">O</span>
+      </a>
+
+      <nav class="livo-nav">
+        <a href="login.html"> Login </a>
+      </nav>
+    </header>
+
+    <!-- =====================================================
+     REGISTRATION
+===================================================== -->
+
+    <main class="registration-card">
+      <!-- HEADER -->
+
+      <div class="auth-header">
+        <h1>Create Your LIVO Business Account</h1>
+
+        <p>Join the trusted B2B network for hospitality resource exchange.</p>
+      </div>
+
+      <form id="registrationForm">
+        <!-- =================================================
+             1. ACCOUNT INFORMATION
+        ================================================== -->
+
+        <section class="form-section">
+          <h2 class="form-section-title">1. Account Information</h2>
+
+          <div class="form-grid">
+            <!-- Full Name -->
+
+            <div class="form-group">
+              <label for="fullName">
+                Full Name <span class="required">*</span>
+              </label>
+
+              <input
+                type="text"
+                id="fullName"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+
+            <!-- Business Email -->
+
+            <div class="form-group">
+              <label for="email">
+                Business Email
+                <span class="required">*</span>
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                placeholder="business@example.com"
+                required
+              />
+            </div>
+
+            <!-- Mobile -->
+
+            <div class="form-group">
+              <label for="mobile">
+                Mobile Number
+                <span class="required">*</span>
+              </label>
+
+              <input
+                type="tel"
+                id="mobile"
+                placeholder="10-digit mobile number"
+                maxlength="10"
+                required
+              />
+            </div>
+
+            <!-- Alternate -->
+
+            <div class="form-group">
+              <label for="alternate">
+                Alternate Contact
+
+                <span class="optional"> (Optional) </span>
+              </label>
+
+              <input type="tel" id="alternate" placeholder="Optional" />
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================
+             2. BUSINESS INFORMATION
+        ================================================== -->
+
+        <section class="form-section">
+          <h2 class="form-section-title">2. Business Information</h2>
+
+          <div class="form-grid">
+            <!-- Business Name -->
+
+            <div class="form-group">
+              <label for="businessName">
+                Business Name
+                <span class="required">*</span>
+              </label>
+
+              <input
+                type="text"
+                id="businessName"
+                placeholder="Enter business name"
+                required
+              />
+            </div>
+
+            <!-- Business Type -->
+
+            <div class="form-group">
+              <label for="businessType">
+                Business Type
+                <span class="required">*</span>
+              </label>
+
+              <select id="businessType" required>
+                <option value="">Select business type</option>
+
+                <option>Hotel / Resort</option>
+
+                <option>Restaurant</option>
+
+                <option>Caterer</option>
+
+                <option>Banquet / Event Venue</option>
+
+                <option>Event Management</option>
+
+                <option>Equipment Rental</option>
+
+                <option>Transport / Logistics</option>
+
+                <option>Decor / Exhibition</option>
+
+                <option>Commercial Kitchen</option>
+
+                <option>Other</option>
+              </select>
+            </div>
+
+            <!-- Description -->
+
+            <div class="form-group form-full">
+              <label for="description">
+                Business Description
+
+                <span class="optional"> (Optional) </span>
+              </label>
+
+              <textarea
+                id="description"
+                placeholder="Briefly describe your business..."
+              ></textarea>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================
+             3. BUSINESS LOCATION
+        ================================================== -->
+
+        <section class="form-section">
+          <h2 class="form-section-title">3. Business Location</h2>
+
+          <div class="form-grid">
+            <!-- Address -->
+
+            <div class="form-group form-full">
+              <label for="address">
+                Complete Business Address
+                <span class="required">*</span>
+              </label>
+
+              <textarea
+                id="address"
+                placeholder="Building, street, area..."
+                required
+              ></textarea>
+            </div>
+
+            <!-- City -->
+
+            <div class="form-group">
+              <label for="city"> City <span class="required">*</span> </label>
+
+              <input type="text" id="city" placeholder="Enter city" required />
+            </div>
+
+            <!-- State -->
+
+            <div class="form-group">
+              <label for="state"> State <span class="required">*</span> </label>
+
+              <select id="state" required>
+                <option value="">Select state</option>
+
+                <option>Maharashtra</option>
+
+                <option>Gujarat</option>
+
+                <option>Goa</option>
+
+                <option>Karnataka</option>
+
+                <option>Delhi</option>
+
+                <option>Other</option>
+              </select>
+            </div>
+
+            <!-- PIN -->
+
+            <div class="form-group">
+              <label for="pincode">
+                PIN Code <span class="required">*</span>
+              </label>
+
+              <input
+                type="text"
+                id="pincode"
+                placeholder="6-digit PIN"
+                maxlength="6"
+                required
+              />
+            </div>
+
+            <!-- Location -->
+
+            <div class="form-group">
+              <label for="location">
+                Business Location
+                <span class="required">*</span>
+              </label>
+
+              <div class="location-wrapper">
+                <input
+                  type="text"
+                  id="location"
+                  placeholder="Select business location"
+                  readonly
+                  required
+                />
+
+                <button
+                  type="button"
+                  class="location-button"
+                  onclick="selectLocation()"
+                >
+                  <i class="fa-solid fa-location-dot"></i>
+
+                  Select Location
+                </button>
+              </div>
+
+              <div
+                class="help-text"
+                id="locationStatus"
+                style="display: none; color: #198754"
+              >
+                ✓ Business location selected
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================
+             4. RESOURCES PROVIDED
+        ================================================== -->
+
+        <section class="form-section">
+          <h2 class="form-section-title">4. What Can Your Business Provide?</h2>
+
+          <p class="help-text" style="margin-bottom: 15px">
+            Select the resources your business can offer to other hospitality
+            businesses.
+          </p>
+
+          <div class="resource-grid">
+            <!-- Venue -->
+
+            <label class="resource-option">
+              <input
+                type="checkbox"
+                name="provide"
+                value="Banquet / Event Space"
+              />
+
+              🏢 Banquet / Event Space
+            </label>
+
+            <!-- Furniture -->
+
+            <label class="resource-option">
+              <input type="checkbox" name="provide" value="Furniture" />
+
+              🪑 Furniture
+            </label>
+
+            <!-- AV -->
+
+            <label class="resource-option">
+              <input type="checkbox" name="provide" value="AV Equipment" />
+
+              🔊 AV Equipment
+            </label>
+
+            <!-- Parking -->
+
+            <label class="resource-option">
+              <input type="checkbox" name="provide" value="Parking" />
+
+              🚗 Parking
+            </label>
+
+            <!-- Vehicles -->
+
+            <label class="resource-option">
+              <input type="checkbox" name="provide" value="Vehicles" />
+
+              🚐 Vehicles
+            </label>
+
+            <!-- Kitchen -->
+
+            <label class="resource-option">
+              <input
+                type="checkbox"
+                name="provide"
+                value="Kitchen Facilities"
+              />
+
+              🍳 Kitchen Facilities
+            </label>
+
+            <!-- Catering -->
+
+            <label class="resource-option">
+              <input
+                type="checkbox"
+                name="provide"
+                value="Catering Equipment"
+              />
+
+              🍽️ Catering Equipment
+            </label>
+
+            <!-- Event -->
+
+            <label class="resource-option">
+              <input type="checkbox" name="provide" value="Event Equipment" />
+
+              🎪 Event Equipment
+            </label>
+
+            <!-- Other -->
+
+            <label class="resource-option">
+              <input type="checkbox" name="provide" value="Other" />
+
+              ➕ Other
+            </label>
+          </div>
+        </section>
+
+        <!-- =================================================
+             5. BUSINESS VERIFICATION
+        ================================================== -->
+
+        <section class="form-section">
+          <h2 class="form-section-title">5. Business Verification</h2>
+
+          <div class="verification-box">
+            <!-- Verification Information -->
+
+            <div class="verification-header">
+              <div class="verification-icon">
+                <i class="fa-solid fa-check"></i>
+              </div>
+
+              <div>
+                <h3>Build Trust with Other Businesses</h3>
+
+                <p>
+                  LIVO uses your business information and location details to
+                  help create a trusted B2B network.
+                </p>
+              </div>
+            </div>
+
+            <!-- Business Card -->
+
+            <div class="upload-box">
+              <div class="upload-icon">
+                <i class="fa-regular fa-id-card"></i>
+              </div>
+
+              <strong> Upload Business Card </strong>
+
+              <p>Add a photo or scan of your business card. JPG, PNG or PDF.</p>
+
+              <input
+                type="file"
+                id="businessCard"
+                accept=".jpg,.jpeg,.png,.pdf"
+              />
+            </div>
+
+            <!-- Optional -->
+
+            <div class="verification-note">
+              <strong> Don't have a business card? </strong>
+
+              <br />
+
+              You can still register with basic verification. Business card
+              verification can be completed later.
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================
+             6. CREATE ACCOUNT
+        ================================================== -->
+
+        <section class="form-section">
+          <h2 class="form-section-title">6. Create Your Account</h2>
+
+          <div class="form-grid">
+            <!-- USERNAME -->
+
+            <div class="form-group">
+              <label for="username">
+                Username
+                <span class="required">*</span>
+              </label>
+
+              <input
+                type="text"
+                id="username"
+                placeholder="Enter your username"
+                required
+              />
+            </div>
+
+            <!-- PASSWORD -->
+
+            <div class="form-group">
+              <label for="password">
+                Password
+                <span class="required">*</span>
+              </label>
+
+              <div class="password-wrapper">
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="Create password"
+                  required
+                />
+
+                <button
+                  type="button"
+                  class="password-toggle"
+                  onclick="togglePassword('password', this)"
+                >
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- CONFIRM PASSWORD -->
+
+            <div class="form-group">
+              <label for="confirmPassword">
+                Confirm Password
+                <span class="required">*</span>
+              </label>
+
+              <div class="password-wrapper">
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  placeholder="Confirm password"
+                  required
+                />
+
+                <button
+                  type="button"
+                  class="password-toggle"
+                  onclick="togglePassword('confirmPassword', this)"
+                >
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================
+             TERMS
+        ================================================== -->
+
+        <div class="terms">
+          <input type="checkbox" id="terms" required />
+
+          <label for="terms">
+            I agree to LIVO's
+
+            <a href="#"> Terms of Service </a>
+
+            and
+
+            <a href="#"> Privacy Policy </a>.
+          </label>
+        </div>
+
+        <!-- =================================================
+             REGISTER BUTTON
+        ================================================== -->
+
+        <button type="submit" class="primary-button">
+          Create LIVO Business Account
+        </button>
+
+        <!-- LOGIN -->
+
+        <div class="auth-footer">
+          Already have an account?
+
+          <a href="login.html"> Login </a>
+        </div>
+      </form>
+    </main>
+
+    <!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+    <script>
+      /* =====================================================
+   LOCATION
+===================================================== */
+
+      function selectLocation() {
+        /*
+        Demo behaviour.
+
+        Later connect this to:
+        - Browser Geolocation
+        - Map service
+        - Flask backend
+    */
+
+        document.getElementById("location").value =
+          "Business location selected";
+
+        document.getElementById("locationStatus").style.display = "block";
+      }
+
+      /* =====================================================
+   PASSWORD VISIBILITY
+===================================================== */
+
+      function togglePassword(inputId, button) {
+        const input = document.getElementById(inputId);
+
+        const icon = button.querySelector("i");
+
+        if (input.type === "password") {
+          input.type = "text";
+
+          icon.classList.remove("fa-eye");
+
+          icon.classList.add("fa-eye-slash");
+        } else {
+          input.type = "password";
+
+          icon.classList.remove("fa-eye-slash");
+
+          icon.classList.add("fa-eye");
+        }
+      }
+
+      /* =====================================================
+   REGISTRATION FORM
+===================================================== */
+
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          /* -----------------------------
+           PASSWORD CHECK
+        ----------------------------- */
+
+          const password = document.getElementById("password").value;
+
+          const confirmPassword =
+            document.getElementById("confirmPassword").value;
+
+          if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+
+            return;
+          }
+
+          /* -----------------------------
+           MOBILE CHECK
+        ----------------------------- */
+
+          const mobile = document.getElementById("mobile").value;
+
+          if (!/^[0-9]{10}$/.test(mobile)) {
+            alert("Please enter a valid 10-digit mobile number.");
+
+            return;
+          }
+
+          /* -----------------------------
+           PIN CHECK
+        ----------------------------- */
+
+          const pincode = document.getElementById("pincode").value;
+
+          if (!/^[0-9]{6}$/.test(pincode)) {
+            alert("Please enter a valid 6-digit PIN code.");
+
+            return;
+          }
+
+          /* -----------------------------
+           LOCATION CHECK
+        ----------------------------- */
+
+          const location = document.getElementById("location").value;
+
+          if (!location) {
+            alert("Please select your business location.");
+
+            return;
+          }
+
+          /* -----------------------------
+           PROVIDED RESOURCES
+        ----------------------------- */
+
+          const provided = document.querySelectorAll(
+            'input[name="provide"]:checked',
+          );
+
+          const providedResources = Array.from(provided).map(
+            (item) => item.value,
+          );
+
+          console.log("Provided Resources:", providedResources);
+
+          /* -----------------------------
+           BUSINESS CARD
+           OPTIONAL
+        ----------------------------- */
+
+          const businessCard = document.getElementById("businessCard");
+
+          if (businessCard.files.length > 0) {
+            alert(
+              "Registration submitted!\n\n" +
+                "Business card uploaded.\n" +
+                "Verification status: Pending.",
+            );
+          } else {
+            alert(
+              "Registration submitted!\n\n" +
+                "Basic verification enabled.\n" +
+                "You can complete business verification later.",
+            );
+          }
+
+          /*
+            Later connect to Flask:
+
+            const formData = new FormData(this);
+
+            fetch("/api/register", {
+                method: "POST",
+                body: formData
+            });
+        */
+        });
+    </script>
+  </body>
+</html>

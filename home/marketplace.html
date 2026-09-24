@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Livo - Marketplace</title>
+    <link rel="stylesheet" href="marketplace.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="marketplace.html">L<span>I</span>VO</a>
+      </div>
+      <nav class="nav">
+        <a href="marketplace.html" class="nav-link active">Home</a>
+        <a href="reverse_request.html" class="nav-link">Reverse Requests</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section id="market" class="active-section">
+        <div class="hero">
+          <h1>Share. Connect. Grow.</h1>
+          <p>
+            <b>Livo</b> connects hospitality businesses with nearby resources
+            that are available when they need them—while helping providers
+            monetize idle capacity.
+          </p>
+          <div class="pills">
+            <span class="pill">⏰ Time-window matching</span>
+            <span class="pill">📍 Location-aware</span>
+            <span class="pill">🧠 Smart matching</span>
+            <span class="pill">✓ Verified B2B</span>
+          </div>
+        </div>
+
+        <div class="title-row">
+          <h2>Find Hospitality Resources</h2>
+          <a href="reverse_request.html" class="btn green">
+            + Post a Requirement
+          </a>
+        </div>
+
+        <div class="toolbar">
+          <input
+            id="search"
+            placeholder="Search banquet hall, chairs, AV, vehicle..."
+            oninput="render()"
+          />
+          <select id="type" onchange="render()">
+            <option value="">All types</option>
+            <option>Banquet Space</option>
+            <option>Parking</option>
+            <option>Vehicles</option>
+            <option>Furniture</option>
+            <option>AV Equipment</option>
+            <option>Kitchen Capacity</option>
+          </select>
+          <select id="location" onchange="render()">
+            <option value="">Any location</option>
+            <option>Andheri</option>
+            <option>Bandra</option>
+            <option>Powai</option>
+            <option>Lower Parel</option>
+          </select>
+        </div>
+
+        <div id="resources" class="grid"></div>
+      </section>
+    </main>
+
+    <div id="modal" class="modal">
+      <div class="modalbox">
+        <button class="close" onclick="closeModal()">✕</button>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="marketplace.js"></script>
+  </body>
+</html>

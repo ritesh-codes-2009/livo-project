@@ -1,0 +1,1533 @@
+/* =====================================================
+   LIVO - SHARED WEBSITE CSS
+   Login + Business Registration
+===================================================== */
+
+
+/* =====================================================
+   GLOBAL RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #0d1838;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.livo-navbar {
+    height: 72px;
+    width: 100%;
+    background: #0d1838;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    box-shadow:
+        0 3px 15px rgba(13, 24, 56, 0.15);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* =====================================================
+   LIVO LOGO
+===================================================== */
+
+.livo-logo {
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 30px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+/* Individual logo letters */
+
+.logo-l{
+    color: white;
+}
+.logo-i {
+    color: #0da596;
+}
+.logo-v {
+    color: white;
+}
+.logo-o {
+    color: white;
+}
+
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.livo-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.livo-nav a {
+    text-decoration: none;
+
+    color: #dbe5f5;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+.livo-nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   AUTH PAGE
+   Used by LOGIN page
+===================================================== */
+
+.auth-page {
+    min-height: calc(100vh - 72px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 20px;
+}
+
+
+/* =====================================================
+   LOGIN / AUTH CARD
+===================================================== */
+
+.auth-card {
+    width: min(440px, 100%);
+
+    background: #ffffff;
+
+    border: 1px solid #e1e8f2;
+
+    border-radius: 18px;
+
+    padding: 38px;
+
+    box-shadow:
+        0 10px 35px rgba(13, 24, 56, 0.08);
+}
+
+
+/* =====================================================
+   AUTH HEADER
+===================================================== */
+
+.auth-header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.auth-header h1 {
+    color: #0d1838;
+
+    font-size: 30px;
+
+    line-height: 1.25;
+
+    margin-bottom: 8px;
+}
+
+.auth-header p {
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   FORM GROUP
+===================================================== */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+
+    color: #0d1838;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+
+/* =====================================================
+   REQUIRED / OPTIONAL
+===================================================== */
+
+.required {
+    color: #dc3545;
+    font-weight: 700;
+}
+
+.optional {
+    color: #94a3b8;
+
+    font-size: 12px;
+
+    font-weight: 400;
+}
+
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    border: 1px solid #d7e0ec;
+
+    background: #ffffff;
+
+    color: #0d1838;
+
+    border-radius: 9px;
+
+    padding: 12px 14px;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+/* Placeholder */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #94a3b8;
+}
+
+
+/* Focus */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+
+/* Textarea */
+
+.form-group textarea {
+    min-height: 110px;
+
+    resize: vertical;
+}
+
+
+/* =====================================================
+   PASSWORD WRAPPER
+===================================================== */
+
+.password-wrapper {
+    position: relative;
+
+    width: 100%;
+}
+
+.password-wrapper input {
+    padding-right: 48px;
+}
+
+
+/* Password eye button */
+
+.password-toggle {
+    position: absolute;
+
+    right: 8px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 36px;
+    height: 36px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #64748b;
+
+    cursor: pointer;
+
+    border-radius: 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.2s ease;
+}
+
+.password-toggle:hover {
+    background: #eef2f7;
+
+    color: #2563eb;
+}
+
+
+/* =====================================================
+   LOGIN FORM OPTIONS
+===================================================== */
+
+.form-options {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin: 8px 0 22px;
+
+    font-size: 13px;
+}
+
+
+/* Remember me */
+
+.remember {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #64748b;
+
+    cursor: pointer;
+}
+
+.remember input {
+    accent-color: #2563eb;
+
+    cursor: pointer;
+}
+
+
+/* Forgot password */
+
+.forgot-password {
+
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   PRIMARY BUTTON
+===================================================== */
+
+.primary-button {
+
+    width: 100%;
+
+    border: none;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    padding: 13px 18px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+.primary-button:hover {
+
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 16px rgba(37, 99, 235, 0.25);
+}
+
+.primary-button:active {
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 27px 0 20px;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+
+    text-align: center;
+}
+
+.divider::before,
+.divider::after {
+
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: #e2e8f0;
+}
+
+
+/* =====================================================
+   SOCIAL LOGIN
+===================================================== */
+
+.social-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+.social-button {
+
+    width: 44px;
+    height: 44px;
+
+    border: 1px solid #d9e1eb;
+
+    background: #ffffff;
+
+    color: #475569;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.25s ease;
+}
+
+.social-button:hover {
+
+    border-color: #2563eb;
+
+    color: #2563eb;
+
+    background: #f5f8ff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   AUTH FOOTER
+===================================================== */
+
+.auth-footer {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+.auth-footer a {
+
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    margin-left: 4px;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   REGISTRATION PAGE
+===================================================== */
+
+.registration-card {
+
+    width: min(1050px, 94%);
+
+    margin: 45px auto 70px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e8f2;
+
+    border-radius: 18px;
+
+    padding: 42px;
+
+    box-shadow:
+        0 10px 35px rgba(13, 24, 56, 0.07);
+}
+
+
+/* Registration header */
+
+.registration-card .auth-header {
+
+    padding-bottom: 28px;
+
+    border-bottom: 1px solid #e5eaf1;
+
+    margin-bottom: 30px;
+}
+
+.registration-card .auth-header h1 {
+
+    font-size: 30px;
+
+    color: #0d1838;
+}
+
+.registration-card .auth-header p {
+
+    max-width: 650px;
+
+    margin: 8px auto 0;
+
+    color: #64748b;
+}
+
+
+/* =====================================================
+   FORM SECTION
+===================================================== */
+
+.form-section {
+
+    padding: 28px 0;
+
+    border-bottom: 1px solid #e7edf4;
+}
+
+.form-section:first-of-type {
+    padding-top: 0;
+}
+
+
+/* Section heading */
+
+.form-section-title {
+
+    font-size: 18px;
+
+    color: #0d1838;
+
+    margin-bottom: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* Small blue line before heading */
+
+.form-section-title::before {
+
+    content: "";
+
+    width: 4px;
+
+    height: 22px;
+
+    background: #2563eb;
+
+    border-radius: 5px;
+}
+
+
+/* =====================================================
+   REGISTRATION FORM GRID
+===================================================== */
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px 22px;
+}
+
+
+/* Full width field */
+
+.form-full {
+    grid-column: 1 / -1;
+}
+
+
+/* =====================================================
+   LOCATION
+===================================================== */
+
+.location-wrapper {
+
+    position: relative;
+
+    display: flex;
+
+    gap: 8px;
+}
+
+.location-wrapper input {
+
+    flex: 1;
+
+    background: #f8fafc;
+
+    cursor: default;
+}
+
+
+/* Location button */
+
+.location-button {
+
+    flex-shrink: 0;
+
+    border: 1px solid #2563eb;
+
+    background: #ffffff;
+
+    color: #2563eb;
+
+    border-radius: 9px;
+
+    padding: 0 15px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    transition: all 0.25s ease;
+}
+
+.location-button:hover {
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 5px 12px rgba(37, 99, 235, 0.18);
+}
+
+
+/* Location success text */
+
+.help-text {
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    margin-top: 7px;
+}
+
+#locationStatus {
+
+    color: #198754 !important;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   RESOURCE GRID
+===================================================== */
+
+.resource-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+
+/* Resource option */
+
+.resource-option {
+
+    min-height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 13px 14px;
+
+    border: 1px solid #dce4ee;
+
+    background: #f8fafc;
+
+    border-radius: 10px;
+
+    color: #334155;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.resource-option:hover {
+
+    border-color: #2563eb;
+
+    background: #f5f8ff;
+
+    transform: translateY(-1px);
+}
+
+
+/* Checkbox */
+
+.resource-option input {
+
+    width: 17px;
+    height: 17px;
+
+    accent-color: #2563eb;
+
+    cursor: pointer;
+}
+
+
+/* Checked resource */
+
+.resource-option:has(input:checked) {
+
+    border-color: #0da596;
+
+    background: #eefaf8;
+
+    color: #087f73;
+}
+
+
+/* =====================================================
+   VERIFICATION BOX
+===================================================== */
+
+.verification-box {
+
+    background: #f8fafc;
+
+    border: 1px solid #dfe7f0;
+
+    border-radius: 14px;
+
+    padding: 24px;
+}
+
+
+/* Verification header */
+
+.verification-header {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+}
+
+
+/* Verification icon */
+
+.verification-icon {
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #e8f8f5;
+
+    color: #087f73;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+}
+
+.verification-header h3 {
+
+    color: #0d1838;
+
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+.verification-header p {
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   BUSINESS CARD UPLOAD
+===================================================== */
+
+.upload-box {
+
+    background: #ffffff;
+
+    border: 2px dashed #cbd5e1;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    transition: all 0.25s ease;
+}
+
+.upload-box:hover {
+
+    border-color: #2563eb;
+
+    background: #f8fbff;
+}
+
+
+/* Upload icon */
+
+.upload-icon {
+
+    width: 50px;
+    height: 50px;
+
+    margin: 0 auto 12px;
+
+    border-radius: 12px;
+
+    background: #eef4ff;
+
+    color: #2563eb;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 21px;
+}
+
+.upload-box strong {
+
+    display: block;
+
+    color: #0d1838;
+
+    font-size: 15px;
+
+    margin-bottom: 5px;
+}
+
+.upload-box p {
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+}
+
+
+/* File input */
+
+.upload-box input[type="file"] {
+
+    max-width: 100%;
+
+    font-size: 13px;
+
+    color: #475569;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   VERIFICATION NOTE
+===================================================== */
+
+.verification-note {
+
+    margin-top: 16px;
+
+    padding: 13px 15px;
+
+    background: #fffdf2;
+
+    border: 1px solid #f1e7a8;
+
+    border-radius: 9px;
+
+    color: #665d20;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.verification-note strong {
+    color: #514a18;
+}
+
+
+/* =====================================================
+   TERMS
+===================================================== */
+
+.terms {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 9px;
+
+    margin: 28px 0 20px;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+.terms input {
+
+    width: 17px;
+    height: 17px;
+
+    flex-shrink: 0;
+
+    margin-top: 2px;
+
+    accent-color: #2563eb;
+
+    cursor: pointer;
+}
+
+.terms label {
+    cursor: pointer;
+}
+
+.terms a {
+
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   REGISTRATION BUTTON
+===================================================== */
+
+.registration-card > form > .primary-button {
+
+    margin-top: 4px;
+}
+
+
+/* =====================================================
+   SELECT DROPDOWN
+===================================================== */
+
+select {
+
+    cursor: pointer;
+}
+
+select option {
+
+    color: #0d1838;
+
+    background: #ffffff;
+}
+
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #b8c5d6;
+
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+
+/* =====================================================
+   RESPONSIVE - TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .livo-navbar {
+        padding: 0 4%;
+    }
+
+    .registration-card {
+
+        width: 94%;
+
+        padding: 32px;
+    }
+
+    .resource-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE - MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    /* Navbar */
+
+    .livo-navbar {
+
+        height: auto;
+
+        min-height: 70px;
+
+        padding: 12px 18px;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    .livo-logo {
+        font-size: 27px;
+    }
+
+
+    .livo-nav {
+
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    .livo-nav a {
+
+        font-size: 12px;
+
+        padding: 8px 14px;
+    }
+
+
+    /* Login */
+
+    .auth-page {
+
+        padding: 30px 16px;
+    }
+
+
+    .auth-card {
+
+        padding: 28px 22px;
+
+        border-radius: 14px;
+    }
+
+
+    .auth-header h1 {
+
+        font-size: 26px;
+    }
+
+
+    /* Registration */
+
+    .registration-card {
+
+        width: 94%;
+
+        margin: 25px auto 40px;
+
+        padding: 26px 20px;
+
+        border-radius: 14px;
+    }
+
+
+    .registration-card .auth-header h1 {
+
+        font-size: 25px;
+    }
+
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    .form-full {
+
+        grid-column: auto;
+    }
+
+
+    .form-section {
+
+        padding: 23px 0;
+    }
+
+
+    .form-section-title {
+
+        font-size: 17px;
+    }
+
+
+    /* Resources */
+
+    .resource-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Location */
+
+    .location-wrapper {
+
+        flex-direction: column;
+    }
+
+
+    .location-button {
+
+        min-height: 44px;
+
+        justify-content: center;
+    }
+
+
+    /* Verification */
+
+    .verification-box {
+
+        padding: 18px;
+    }
+
+
+    .verification-header {
+
+        gap: 11px;
+    }
+
+
+    .verification-header h3 {
+
+        font-size: 15px;
+    }
+
+
+    /* Upload */
+
+    .upload-box {
+
+        padding: 20px 14px;
+    }
+
+
+    /* Terms */
+
+    .terms {
+
+        font-size: 12px;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL DEVICES
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .registration-card {
+
+        width: 96%;
+
+        padding: 22px 16px;
+    }
+
+    .auth-card {
+
+        padding: 24px 18px;
+    }
+
+    .auth-header h1 {
+
+        font-size: 24px;
+    }
+
+    .registration-card .auth-header h1 {
+
+        font-size: 22px;
+    }
+
+}
+
+/* ================================
+   LIVO LOGIN PAGE
+   Animated Background Circles
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    background: #f5f7fb;
+    
+}
+
+/* Main login page */
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+
+/* ================================
+   ANIMATED BACKGROUND CIRCLES
+================================ */
+
+/* Common circle style */
+.auth-page::before,
+.auth-page::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Blue circle */
+.auth-page::before {
+    width: 90px;
+    height: 90px;
+
+    background: rgba(37, 99, 235, 0.18);
+
+    left: 5%;
+    top: 65%;
+
+    animation: moveCircle1 8s ease-in-out infinite alternate;
+}
+
+/* Teal/blue circle */
+.auth-page::after {
+    width: 75px;
+    height: 75px;
+
+    background: rgba(13, 165, 150, 0.18);
+
+    right: 5%;
+    top: 45%;
+
+    animation: moveCircle2 10s ease-in-out infinite alternate;
+}
+
+
+/* ================================
+   EXTRA FLOATING CIRCLES
+================================ */
+
+.auth-page .floating-circle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Small blue circle */
+.circle-1 {
+    width: 25px;
+    height: 25px;
+    background: rgba(37, 99, 235, 0.45);
+
+    top: 20%;
+    left: 12%;
+
+    animation: float1 6s ease-in-out infinite;
+}
+
+/* Small teal circle */
+.circle-2 {
+    width: 18px;
+    height: 18px;
+    background: rgba(13, 165, 150, 0.40);
+
+    bottom: 18%;
+    right: 15%;
+
+    animation: float2 7s ease-in-out infinite;
+}
+
+/* Large soft circle */
+.circle-3 {
+    width: 160px;
+    height: 160px;
+    background: rgba(37, 99, 235, 0.06);
+
+    top: -50px;
+    right: 20%;
+
+    animation: float3 12s ease-in-out infinite;
+}
+
+
+/* ================================
+   CIRCLE ANIMATIONS
+================================ */
+
+@keyframes moveCircle1 {
+
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(70px, -40px);
+    }
+
+    100% {
+        transform: translate(140px, 20px);
+    }
+}
+
+@keyframes moveCircle2 {
+
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-80px, 50px);
+    }
+
+    100% {
+        transform: translate(-30px, 120px);
+    }
+}
+
+@keyframes float1 {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(40px, -50px);
+    }
+}
+
+@keyframes float2 {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-45px, -35px);
+    }
+}
+
+.btn.primary{
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Livo - Provider Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="marketplace.html">L<span>I</span>VO</a>
+      </div>
+      <nav class="nav">
+        <a href="marketplace.html" class="nav-link">Home</a>
+        <a href="reverse_request.html" class="nav-link">Reverse Requests</a>
+        <a href="dashboard.html" class="nav-link active">Dashboard</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section id="dashboard" class="active-section">
+        <div class="title-row">
+          <h2>Provider Dashboard</h2>
+          <span class="badge">✓ Verified Business</span>
+        </div>
+
+        <div class="stats">
+          <div class="card stat">
+            <small>Active Listings</small>
+            <strong>12</strong>
+          </div>
+          <div class="card stat">
+            <small>Utilization</small>
+            <strong>78%</strong>
+          </div>
+          <div class="card stat">
+            <small>Bookings</small>
+            <strong>34</strong>
+          </div>
+          <div class="card stat">
+            <small>Extra Revenue</small>
+            <strong>₹1.84L</strong>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <h3>📊 Resource Utilization</h3>
+            <p class="meta">Banquet Hall</p>
+            <div class="progress-bar-bg">
+              <div
+                class="progress-bar-fill"
+                style="width: 90%; background: #0f9f8f"
+              ></div>
+            </div>
+            <p class="meta">90% utilized</p>
+
+            <p class="meta" style="margin-top: 15px">AV Equipment</p>
+            <div class="progress-bar-bg">
+              <div
+                class="progress-bar-fill"
+                style="width: 42%; background: #2563eb"
+              ></div>
+            </div>
+            <p class="meta">42% utilized</p>
+          </div>
+
+          <div class="card">
+            <h3>💡 Livo Opportunity</h3>
+            <p>
+              Your AV equipment is idle for approximately <b>35 hours</b> this
+              month.
+            </p>
+            <p style="margin-top: 10px">
+              Estimated additional revenue if shared:
+            </p>
+            <div class="price">₹18,000–₹25,000</div>
+            <button
+              class="btn green"
+              style="width: 100%"
+              onclick="toast('AV Equipment listing created')"
+            >
+              List Idle Resource
+            </button>
+          </div>
+
+          <div class="card">
+            <h3>🔔 Recent Requests</h3>
+            <p class="meta">300-seat venue · 2.4 km · ₹30,000</p>
+            <button
+              class="btn secondary"
+              style="width: 100%; margin-bottom: 12px"
+              onclick="toast('Opening request')"
+            >
+              View Request
+            </button>
+            <hr />
+            <p class="meta">50 tables · 5.1 km · ₹5,000</p>
+            <button
+              class="btn secondary"
+              style="width: 100%"
+              onclick="toast('Opening request')"
+            >
+              View Request
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>LIVO - Login</title>
+
+    <!-- LIVO Login CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+    <header class="livo-navbar">
+      <!-- LIVO LOGO -->
+
+      <a href="index.html" class="livo-logo">
+        <span class="logo-l">L</span>
+        <span class="logo-i">I</span>
+        <span class="logo-v">V</span>
+        <span class="logo-o">O</span>
+      </a>
+
+      <!-- NAVIGATION -->
+
+      <nav class="livo-nav">
+        <a href="index.html"> Home </a>
+
+        <a href="signup.html"> Sign Up </a>
+      </nav>
+    </header>
+
+    <!-- =====================================================
+     LOGIN PAGE
+===================================================== -->
+
+    <main class="auth-page">
+      <!-- =================================================
+         ANIMATED BACKGROUND CIRCLES
+    ================================================== -->
+
+      <div class="floating-circle circle-1"></div>
+
+      <div class="floating-circle circle-2"></div>
+
+      <div class="floating-circle circle-3"></div>
+
+      <!-- =================================================
+         LOGIN CARD
+    ================================================== -->
+
+      <div class="auth-card">
+        <!-- =================================================
+             LIVO LOGO
+        ================================================== -->
+
+        <!-- =================================================
+             LOGIN HEADER
+        ================================================== -->
+
+        <div class="auth-header">
+          <h1>Welcome Back</h1>
+
+          <p>Sign in to your LIVO business account</p>
+        </div>
+
+        <!-- =================================================
+             LOGIN FORM
+        ================================================== -->
+
+        <form id="loginForm">
+          <!-- USERNAME -->
+
+          <div class="form-group">
+            <label for="username"> Username </label>
+
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter your username"
+              autocomplete="username"
+              required
+            />
+          </div>
+
+          <!-- PASSWORD -->
+
+          <div class="form-group">
+            <label for="password"> Password </label>
+
+            <div class="password-wrapper">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+              />
+
+              <button
+                type="button"
+                class="password-toggle"
+                onclick="togglePassword()"
+                aria-label="Show password"
+              >
+                <i class="fa-regular fa-eye" id="eyeIcon"> </i>
+              </button>
+            </div>
+          </div>
+
+          <!-- =================================================
+                 REMEMBER ME / FORGOT PASSWORD
+            ================================================== -->
+
+          <div class="form-options">
+            <label class="remember">
+              <input type="checkbox" id="rememberMe" name="rememberMe" />
+
+              <span> Remember me </span>
+            </label>
+
+            <a href="#" class="forgot-password"> Forgot password? </a>
+          </div>
+
+          <!-- =================================================
+                 LOGIN BUTTON
+            ================================================== -->
+
+          <button type="submit" class="primary-button">
+          <a href="home/marketplace.html" class="btn primary">  Sign In </a>
+            <i class="fa-solid fa-arrow-right" style="margin-left: 8px"> </i>
+          </button>
+        </form>
+
+        <!-- =================================================
+             DIVIDER
+        ================================================== -->
+
+        <div class="divider">
+          <span> or continue with </span>
+        </div>
+
+        <!-- =================================================
+             SOCIAL LOGIN
+        ================================================== -->
+
+        <div class="social-buttons">
+          <!-- GOOGLE -->
+
+          <button
+            type="button"
+            class="social-button"
+            title="Continue with Google"
+          >
+            <i class="fa-brands fa-google"></i>
+          </button>
+
+          <!-- FACEBOOK -->
+
+          <button
+            type="button"
+            class="social-button"
+            title="Continue with Facebook"
+          >
+            <i class="fa-brands fa-facebook-f"></i>
+          </button>
+
+          <!-- APPLE -->
+
+          <button
+            type="button"
+            class="social-button"
+            title="Continue with Apple"
+          >
+            <i class="fa-brands fa-apple"></i>
+          </button>
+        </div>
+
+        <!-- =================================================
+             SIGN UP
+        ================================================== -->
+
+        <div class="auth-footer">
+          Don't have an account?
+
+          <a href="signup.html"> Sign Up </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+    <script>
+      /* =====================================================
+   PASSWORD TOGGLE
+===================================================== */
+
+      function togglePassword() {
+        const password = document.getElementById("password");
+
+        const eyeIcon = document.getElementById("eyeIcon");
+
+        if (password.type === "password") {
+          password.type = "text";
+
+          eyeIcon.classList.remove("fa-eye");
+
+          eyeIcon.classList.remove("fa-regular");
+
+          eyeIcon.classList.add("fa-eye-slash");
+        } else {
+          password.type = "password";
+
+          eyeIcon.classList.remove("fa-eye-slash");
+
+          eyeIcon.classList.add("fa-eye");
+
+          eyeIcon.classList.add("fa-regular");
+        }
+      }
+
+      /* =====================================================
+   LOGIN FORM
+===================================================== */
+
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const username = document.getElementById("username").value.trim();
+
+          const password = document.getElementById("password").value;
+
+          const rememberMe = document.getElementById("rememberMe").checked;
+
+          /* Basic validation */
+
+          if (!username) {
+            alert("Please enter your username.");
+
+            return;
+          }
+
+          if (!password) {
+            alert("Please enter your password.");
+
+            return;
+          }
+
+          /* Remember username */
+
+          if (rememberMe) {
+            localStorage.setItem("livoUsername", username);
+          } else {
+            localStorage.removeItem("livoUsername");
+          }
+
+          /* Demo login */
+
+          alert("Login successful!");
+
+          /*
+            Later connect this to Flask:
+
+            fetch("/api/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    username: username,
+                    password: password
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+
+                if (data.success) {
+
+                    window.location.href =
+                        "/dashboard";
+
+                }
+
+            });
+        */
+        });
+
+      /* =====================================================
+   LOAD REMEMBERED USERNAME
+===================================================== */
+
+      window.addEventListener("DOMContentLoaded", function () {
+        const savedUsername = localStorage.getItem("livoUsername");
+
+        if (savedUsername) {
+          document.getElementById("username").value = savedUsername;
+
+          document.getElementById("rememberMe").checked = true;
+        }
+      });
+    </script>
+  </body>
+</html>

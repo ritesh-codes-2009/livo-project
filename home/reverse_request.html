@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Livo - Reverse Requests</title>
+    <link rel="stylesheet" href="reverse_request.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="marketplace.html">L<span>I</span>VO</a>
+      </div>
+      <nav class="nav">
+        <a href="marketplace.html" class="nav-link">Home</a>
+        <a href="reverse_request.html" class="nav-link active"
+          >Reverse Requests</a
+        >
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section id="requests" class="active-section">
+        <div class="title-row">
+          <h2>Reverse Resource Request</h2>
+          <span class="badge">Demand → Supply</span>
+        </div>
+
+        <div class="card" style="margin-bottom: 24px">
+          <p style="color: #475569; margin-bottom: 20px">
+            Tell Livo what your business needs. The matching engine will find
+            providers based on type, capacity, location, budget and time window.
+          </p>
+          <div class="form">
+            <input
+              id="reqType"
+              placeholder="Resource type (e.g. Banquet Space)"
+            />
+            <input
+              id="reqCapacity"
+              placeholder="Capacity / quantity (e.g. 300 seats)"
+            />
+            <input id="reqLocation" placeholder="Location (e.g. Andheri)" />
+            <input id="reqBudget" placeholder="Maximum budget (₹)" />
+            <input id="reqDate" type="date" />
+            <input id="reqTime" placeholder="Time (e.g. 18:00–22:00)" />
+            <textarea
+              id="reqNotes"
+              class="fullcol"
+              placeholder="Additional requirements..."
+            ></textarea>
+            <button class="btn fullcol" onclick="postRequest()">
+              Find Matching Providers
+            </button>
+          </div>
+        </div>
+
+        <div id="matches"></div>
+      </section>
+    </main>
+
+    <div id="modal" class="modal">
+      <div class="modalbox">
+        <button class="close" onclick="closeModal()">✕</button>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="reverse_request.js"></script>
+  </body>
+</html>
